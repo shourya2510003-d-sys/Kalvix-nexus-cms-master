@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   KALVIX NEXUS — PREMIUM DESIGN SYSTEM
+   Theme: White + Deep Black + Royal Gold #D4AF37
+   ============================================================ */
+
+:root {
+  /* Default: Premium White (Light) Mode */
+  --bg-primary: #FFFFFF;
+  --bg-card: #F8F9FA;
+  --bg-surface: #F1F3F5;
+  --gold-primary: #D4AF37;
+  --gold-light: #F0C968;
+  --gold-dark: #B8960B;
+  --gold-glow: rgba(212, 175, 55, 0.2);
+  --text-primary: #0A0A0A;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --border: rgba(212, 175, 55, 0.25);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 30px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.1);
+  --shadow-gold: 0 4px 30px rgba(212,175,55,0.2);
+}
+
+/* Dark Mode */
+[data-theme='dark'], .dark {
+  --bg-primary: #0A0A0A;
+  --bg-card: #111111;
+  --bg-surface: #1A1A1A;
+  --gold-primary: #D4AF37;
+  --gold-light: #F0C968;
+  --gold-dark: #B8960B;
+  --gold-glow: rgba(212, 175, 55, 0.3);
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-muted: #888888;
+  --border: rgba(212, 175, 55, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 8px 30px rgba(0,0,0,0.4);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
+  --shadow-gold: 0 4px 30px rgba(212,175,55,0.25);
+}
+
+/* Legacy support */
+.light, [data-theme='light'] {
+  --bg-primary: #FFFFFF;
+  --bg-card: #F8F9FA;
+  --bg-surface: #F1F3F5;
+  --gold-primary: #D4AF37;
+  --gold-light: #F0C968;
+  --gold-dark: #B8960B;
+  --gold-glow: rgba(212, 175, 55, 0.2);
+  --text-primary: #0A0A0A;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --border: rgba(212, 175, 55, 0.25);
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   KEYFRAME ANIMATIONS
+   ============================================================ */
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(212,175,55,0.2); }
+  50% { box-shadow: 0 0 50px rgba(212,175,55,0.5); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rotateOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
+.animate-gold-pulse { animation: goldPulse 3s ease-in-out infinite; }
+.animate-marquee { animation: marquee 30s linear infinite; }
+.animate-fade-in-up { animation: fadeInUp 0.6s ease forwards; }
+
+/* Shimmer button effect */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.25), transparent);
+  transform: translateX(-100%) skewX(-15deg);
+}
+
+.shimmer-btn:hover::after {
+  animation: shimmer 0.9s ease-in-out;
+}
+
+/* Glass card — adapts to theme */
+.glass-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212,175,55,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+[data-theme='dark'] .glass-card,
+.dark .glass-card {
+  background: rgba(17,17,17,0.7);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* Dark glass (always dark) */
+.glass-dark {
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212,175,55,0.2);
+}
+
+/* Section layout */
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Gold gradient */
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F0C968 40%, #D4AF37 70%, #B8960B 100%);
+  background-size: 200% 200%;
+}
+
+/* Gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F0C968 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold border glow */
+.gold-border { border: 1px solid rgba(212,175,55,0.3); }
+.gold-shadow { box-shadow: var(--shadow-gold); }
+
+/* 3D perspective card */
+.perspective-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Section label */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-rajdhani), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-primary);
+  border: 1px solid rgba(212,175,55,0.3);
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(212,175,55,0.06);
+}
+
+/* Gold line divider */
+.gold-line {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-primary), transparent);
+  border-radius: 2px;
+}
+
+/* Marquee wrapper */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212,175,55,0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Prose links gold */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Focus ring gold */
+*:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 2px;
+}
