@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "attar-and-toners": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116247/kalvix_nexus/navbar/attar_menu.jpg",
+    "baby-care-range": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116255/kalvix_nexus/navbar/child_care_menu.png",
+    "face-and-body": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116280/kalvix_nexus/navbar/face_care_menu.png",
+    "hair-care": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116307/kalvix_nexus/navbar/hair_care_menu.png",
+    "men-care": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116334/kalvix_nexus/navbar/mens_carrer_menu.png",
+    "mother-care": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116339/kalvix_nexus/navbar/mother_care_menu.png",
+    "womens-care": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116344/kalvix_nexus/navbar/women_care_menu.png",
+    "wellness-category": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116350/kalvix_nexus/navbar/wellness_menu.png"
+  },
+  "ingredients": {
+    "avocardo": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116352/kalvix_nexus/ingredients/Avocardo.jpg",
+    "basil-sweet": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116353/kalvix_nexus/ingredients/Basil_Sweet.jpg",
+    "bay-laurel": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116359/kalvix_nexus/ingredients/Bay_Laurel.jpg",
+    "bergamot": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116361/kalvix_nexus/ingredients/Bergamot.jpg",
+    "almond": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116363/kalvix_nexus/ingredients/almond.jpg",
+    "almonds": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116370/kalvix_nexus/ingredients/almonds.jpg",
+    "aloevera": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116372/kalvix_nexus/ingredients/aloevera.jpg",
+    "amla": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116374/kalvix_nexus/ingredients/amla.jpg",
+    "apricot": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116375/kalvix_nexus/ingredients/apricot.jpg",
+    "arrgan": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116376/kalvix_nexus/ingredients/arrgan.jpg",
+    "cistus": "https://res.cloudinary.com/qdq7ult5/image/upload/v1784116377/kalvix_nexus/ingredients/cistus.jpg"
+  }
+}

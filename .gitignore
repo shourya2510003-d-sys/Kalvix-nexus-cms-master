@@ -1,0 +1,30 @@
+# Secrets and Environment Variables
+.env
+.env.*
+*.pem
+*.key
+acme.json
+
+# Exclude Frontend (it has its own repository)
+frontend/
+frontend_old/
+legacy_code/
+
+# Dependencies and IDEs
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and Data
+postgres/data/
+redis/data/
+system_monitor.log
+*.log
+
+# Temp files
+*.bak
+*.tmp
+divine-cardinal-standalone/postgres/data/
+divine-cardinal-standalone/meili_data/
+divine-cardinal-standalone/redis/data/

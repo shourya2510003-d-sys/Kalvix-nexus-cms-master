@@ -1,0 +1,125 @@
+services:
+  dc-standalone-backend:
+    build: ./backend
+    restart: always
+    env_file:
+      - ./backend/.env
+    environment:
+      # Override DB_HOST and others to point to standalone services
+      - DATABASE_URL=postgresql://kalvixadmin:Kalvix@2026@dc-standalone-postgres:5432/divine_cardinal
+      - REDIS_URL=redis://dc-standalone-redis:6379
+      - MEILISEARCH_HOST=http://dc-standalone-meilisearch:7700
+    depends_on:
+      - dc-standalone-postgres
+      - dc-standalone-redis
+      - dc-standalone-meilisearch
+    networks:
+      - app_web
+      - app_internal
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=app_web"
+      
+      # divinecardinal specific router
+      - "traefik.http.routers.dc-standalone-backend.rule=Host(`divinecardinal.com`) && (PathPrefix(`/api/backend`) || PathPrefix(`/uploads`))"
+      - "traefik.http.routers.dc-standalone-backend.entrypoints=websecure"
+      - "traefik.http.routers.dc-standalone-backend.tls=true"
+      - "traefik.http.routers.dc-standalone-backend.tls.certresolver=httpresolver"
+      - "traefik.http.routers.dc-standalone-backend.middlewares=dc-standalone-replace"
+      
+      # shared service port
+      - "traefik.http.services.dc-standalone-backend.loadbalancer.server.port=4000"
+      
+      # middlewares
+      - "traefik.http.middlewares.dc-standalone-replace.replacepathregex.regex=^/api/backend/(.*)"
+      - "traefik.http.middlewares.dc-standalone-replace.replacepathregex.replacement=/api/$$1"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: '1G'
+
+  dc-standalone-frontend:
+    build: ./frontend
+    restart: always
+    env_file:
+      - ./frontend/.env.local
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - dc-standalone-backend
+    networks:
+      - app_web
+      - app_internal
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=app_web"
+      
+      # divinecardinal specific router
+      - "traefik.http.routers.dc-standalone-frontend.rule=Host(`divinecardinal.com`)"
+      - "traefik.http.routers.dc-standalone-frontend.entrypoints=websecure"
+      - "traefik.http.routers.dc-standalone-frontend.tls=true"
+      - "traefik.http.routers.dc-standalone-frontend.tls.certresolver=httpresolver"
+      - "traefik.http.routers.dc-standalone-frontend.priority=20"
+      
+      # shared service port
+      - "traefik.http.services.dc-standalone-frontend.loadbalancer.server.port=3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: '1G'
+
+  dc-standalone-postgres:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_DB: divine_cardinal
+      POSTGRES_USER: kalvixadmin
+      POSTGRES_PASSWORD: Kalvix@2026
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+    networks:
+      - app_internal
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: '1G'
+
+  dc-standalone-redis:
+    image: redis:7-alpine
+    restart: always
+    volumes:
+      - ./redis/data:/data
+    networks:
+      - app_internal
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '512M'
+
+  dc-standalone-meilisearch:
+    image: getmeili/meilisearch:v1.3
+    restart: always
+    environment:
+      MEILI_ENV: development
+      MEILI_MASTER_KEY: meilisearch_master_key_123
+    volumes:
+      - ./meili_data:/meili_data
+    networks:
+      - app_internal
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '512M'
+
+networks:
+  app_internal:
+    external: true
+  app_web:
+    external: true
