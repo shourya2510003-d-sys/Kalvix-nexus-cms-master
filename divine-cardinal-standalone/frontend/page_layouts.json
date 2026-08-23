@@ -1,0 +1,31 @@
+◇ injected env (13) from .env.local // tip: ⌘ enable debugging { debug: true }
+{
+  "blog": {
+    "hero_banner_1783687588842": {
+      "data": {
+        "sliderInterval": 5,
+        "slides": [
+          {
+            "buttonLink": "/shop",
+            "buttonText": "Shop Now",
+            "description": "Distilled with ancient Deg-Bhapka recipes. Deeply nourishes the scalp, reduces hair fall, and restores natural thickness.",
+            "id": "slide-1",
+            "mediaType": "image",
+            "mediaUrl": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=1200",
+            "subtitle": "Time Tested Recipe",
+            "title": "BHRINGRAJ HAIR RITUAL"
+          }
+        ]
+      },
+      "id": "hero_banner_1783687588842",
+      "order": 1,
+      "styles": {
+        "backgroundColor": "#FAF9F6",
+        "fontFamily": "font-serif",
+        "textAlignment": "left",
+        "textColor": "#1A1A1A"
+      },
+      "visible": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "kalvix-nexus-frontend",
+  "version": "1.0.0",
+  "description": "Kalvix Nexus custom luxury ecommerce frontend built with Next.js 15 and Framer Motion",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fontsource/bagnard": "^5.2.5",
+    "clsx": "^2.1.0",
+    "country-state-city": "^3.2.1",
+    "dotenv": "^17.4.2",
+    "firebase": "^12.16.0",
+    "framer-motion": "^11.0.0",
+    "glob": "^13.0.6",
+    "gsap": "^3.12.5",
+    "lucide-react": "^0.344.0",
+    "mammoth": "^1.12.0",
+    "meilisearch": "^0.33.0",
+    "next": "^15.0.0",
+    "nodemailer": "^9.0.3",
+    "openai": "^6.47.0",
+    "razorpay": "^2.9.8",
+    "react": "^19.0.0-rc",
+    "react-dom": "^19.0.0-rc",
+    "react-markdown": "^10.1.0",
+    "recharts": "^2.12.0",
+    "tailwind-merge": "^2.2.0",
+    "twilio": "^6.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/nodemailer": "^8.0.1",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}

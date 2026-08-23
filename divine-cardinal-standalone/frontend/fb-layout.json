@@ -1,0 +1,310 @@
+◇ injected env (13) from .env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+{
+  "brand_usps": {
+    "data": {
+      "items": [
+        {
+          "desc": "Emphasize the 5,000-year-old tradition of Ayurveda and its holistic approach to health and wellness.",
+          "img": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop",
+          "title": "Ayurveda"
+        },
+        {
+          "desc": "Aromatherapy-Based Fragrances: The therapeutic use of essential oils from plants for the improvement of physical, emotional, and spiritual well-being.",
+          "img": "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?q=80&w=600&auto=format&fit=crop",
+          "title": "Aromatherapy"
+        },
+        {
+          "desc": "Use of only natural ingredients, free from harsh chemicals, artificial fragrances, and dyes.",
+          "img": "https://images.unsplash.com/photo-1611077543940-1ce463b72382?q=80&w=600&auto=format&fit=crop",
+          "title": "Natural Ingredients"
+        },
+        {
+          "desc": "Handcrafting each product, ensuring a personal touch and high-quality finish.",
+          "img": "https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=600&auto=format&fit=crop",
+          "title": "Handcrafted with Love"
+        }
+      ],
+      "title": "Our Features"
+    },
+    "id": "brand_usps",
+    "order": 10,
+    "visible": true
+  },
+  "customer_reviews": {
+    "data": {
+      "buttonText": "Write a Review",
+      "emptyStateText": "No reviews published yet. Be the first to share your experience with Divine Cardinal!",
+      "title": "Customer Reviews"
+    },
+    "id": "customer_reviews",
+    "order": 12,
+    "visible": true
+  },
+  "hero_banner": {
+    "data": {
+      "buttonLink": "/shop",
+      "buttonText": "Shop Now",
+      "description": "Distilled with ancient Deg-Bhapka recipes. Deeply nourishes the scalp, reduces hair fall, and restores natural thickness.",
+      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=1200",
+      "subtitle": "Time Tested Recipe",
+      "title": "BHRINGRAJ HAIR RITUAL"
+    },
+    "id": "hero_banner",
+    "order": 0,
+    "visible": true
+  },
+  "instagram_integration": {
+    "data": {
+      "buttonText": "Follow on Instagram",
+      "description": "Watch how Divine Cardinal is transforming skin & health care routines across India.",
+      "items": [
+        {
+          "src": "https://images.unsplash.com/photo-1605368307297-c81121d5a3ec?q=80&w=400&auto=format&fit=crop",
+          "type": "video"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=400&auto=format&fit=crop",
+          "type": "image"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1583209814683-c023dd293cc6?q=80&w=400&auto=format&fit=crop",
+          "type": "image"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=400&auto=format&fit=crop",
+          "type": "image"
+        }
+      ],
+      "subtitle": "Follow Our Journey",
+      "title": "As Seen on Social"
+    },
+    "id": "instagram_integration",
+    "order": 9,
+    "visible": true
+  },
+  "latest_reads": {
+    "data": {
+      "buttonLink": "/blogs/journal",
+      "buttonText": "Read Blog >",
+      "items": [
+        {
+          "category": "Sustainability",
+          "content": "At Divine Cardinal, we believe that true luxury is sustainable. Every single component of our raw material procurement, extraction, and packaging process is aligned with ecological conservation. Our glass jars are completely recyclable, and our organic residue from cold-pressing oils is safely composted and returned to the farmers to enrich the soil for subsequent crops. Guided by the principles of zero-waste Ayurveda, we celebrate the absolute cycle of nature.",
+          "date": "July 8, 2026",
+          "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600",
+          "title": "NOTHING MEANT TO BE WASTED"
+        },
+        {
+          "category": "Sustainability",
+          "content": "Water conservation lies at the core of our manufacturing processes. In our steam-distillation rituals, every single drop of condensation is collected, cooled, and processed through state-of-the-art filtration. We use closed-loop water systems that reuse cooling water, preventing millions of liters of water wastage each year. Our commitment is simple: what we take from the earth, we return with absolute purity.",
+          "date": "June 28, 2026",
+          "image": "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=600",
+          "title": "EVERY DROP, THOUGHTFULLY RETURNED"
+        },
+        {
+          "category": "Brand Story",
+          "content": "Our extraction units and offices run entirely on solar energy grids. Nestled in the sunlit foot-hills of the Himalayas, our solar arrays harvest clean, renewable energy to power the cold-pressing expellers and distillation boilers. We choose to minimize our carbon footprint, ensuring that every time you nourish your skin with Divine Cardinal, you are participating in a clean, solar-driven future for India and the world.",
+          "date": "May 14, 2026",
+          "image": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=600",
+          "title": "POWERED BY THE SUN, GUIDED BY INTENTION"
+        }
+      ],
+      "title": "Latest Reads"
+    },
+    "id": "latest_reads",
+    "order": 6,
+    "visible": true
+  },
+  "marketplace_reviews": {
+    "data": {
+      "items": [
+        {
+          "color": "#FF9900",
+          "comment": "As a professional pianist, my fingers lock up frequently. Geranium Cramp Relief Oil has saved my practice sessions. Works within 10 minutes of rub. Worth every rupee.",
+          "platform": "Amazon",
+          "product": "Geranium Writer's Cramp Relief Oil",
+          "rating": 5,
+          "reviewer": "Ritu Malhotra",
+          "title": "A miracle for hand cramps!"
+        },
+        {
+          "color": "#FF3F6C",
+          "comment": "We tried so many ointments for teething baby. Chamomile Roll-On was highly recommended by group of parents. Truly natural, pleasant sleep scent. Safe and effective.",
+          "platform": "Myntra",
+          "product": "Chamomile Teething Roll-On",
+          "rating": 5,
+          "reviewer": "Dr. Sneha Roy",
+          "title": "Teething relief was instant"
+        },
+        {
+          "color": "#FF9900",
+          "comment": "Instant relief for forehead tension headache. Small compact tube is super travel friendly. Feels very cold and relaxing. 10/10 purchase from Divine Cardinal.",
+          "platform": "Amazon",
+          "product": "Headache Relieving Peppermint Oil",
+          "rating": 5,
+          "reviewer": "Vikram S.",
+          "title": "Peppermint oil does absolute magic"
+        }
+      ],
+      "title": "Loved Everywhere"
+    },
+    "id": "marketplace_reviews",
+    "order": 11,
+    "visible": true
+  },
+  "our_story": {
+    "data": {
+      "description": "Welcome to Divine Cardinal, where we embrace the 5,000-year-old tradition of Ayurveda to offer you holistic health and wellness solutions. Based in India, our brand is dedicated to bringing you the finest aromatherapy-based products, meticulously crafted from the purest natural ingredients.",
+      "image": "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&q=80&w=1200",
+      "signatureText": "Gaurav Agarwal",
+      "title": "Our Story"
+    },
+    "id": "our_story",
+    "order": 7,
+    "visible": true
+  },
+  "quiz_banner": {
+    "data": {
+      "buttonText": "Take the Quiz",
+      "description": "Answer a few simple questions to discover your personalized Ayurvedic ritual tailored specifically to your dosha, skin type and lifestyle needs.",
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1200",
+      "subtitle": "Tailored",
+      "title": "Beauty Routine"
+    },
+    "id": "quiz_banner",
+    "order": 5,
+    "visible": true
+  },
+  "seasonal_indulgences": {
+    "data": {
+      "buttonLink": "/shop",
+      "buttonText": "View All >",
+      "title": "SEASONAL INDULGENCES"
+    },
+    "id": "seasonal_indulgences",
+    "order": 2,
+    "visible": true
+  },
+  "shop_by_concern": {
+    "data": {
+      "items": [
+        {
+          "img": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=300",
+          "name": "Anti-Acne"
+        },
+        {
+          "img": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=300",
+          "name": "Anti-Ageing"
+        },
+        {
+          "img": "https://images.unsplash.com/photo-1515488042361-404e9250afef?auto=format&fit=crop&q=80&w=300",
+          "name": "Teething Relief"
+        },
+        {
+          "img": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=300",
+          "name": "Muscle Spasm"
+        },
+        {
+          "img": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=300",
+          "name": "Skin Glow"
+        }
+      ],
+      "title": "Shop By Concern"
+    },
+    "id": "shop_by_concern",
+    "order": 3,
+    "visible": true
+  },
+  "slow_beauty": {
+    "data": {
+      "buttonLink": "/pages/about",
+      "buttonText": "Explore Now",
+      "description": "A reminder to savour the stillness between moments, pause long enough to feel, ease into your own rhythm, release the urgency and take your time as life gently unfolds.",
+      "title": "RITUALS ARE NEVER RUSHED",
+      "videoImage": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
+      "videoSubtitle": "A cultural invitation",
+      "videoTitleLine1": "to experience",
+      "videoTitleLine2": "slow beauty"
+    },
+    "id": "slow_beauty",
+    "order": 1,
+    "visible": true
+  },
+  "testimonials_slider": {
+    "data": {
+      "buttonText": "Leave a Review",
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+          "name": "Tripti Sahu",
+          "rating": 5,
+          "text": "The Chamomile Teething Roll-On is a lifesaver for my baby's discomfort—soothing, gentle, and easy to apply. Delivery was fast and reliable, and the product arrived perfectly packaged...",
+          "timeAgo": "1 year ago"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+          "name": "Sandhya Agarwal",
+          "rating": 5,
+          "text": "I absolutely love Divine Cardinal's range of natural serums and oils. The Anti-Stretch Marks Oil kept my skin supple and radiant throughout my pregnancy.",
+          "timeAgo": "1 year ago"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
+          "name": "Ayush Gupta",
+          "rating": 5,
+          "text": "The artisanal quality of each product is evident—everything is handcrafted with love and free from harsh chemicals.",
+          "timeAgo": "1 year ago"
+        }
+      ]
+    },
+    "id": "testimonials_slider",
+    "order": 8,
+    "visible": true
+  },
+  "trusted_tales": {
+    "data": {
+      "items": [
+        {
+          "desc": "A fresh flower infused body mist with aromatic Oudh & Green Tea to soften...",
+          "img": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400",
+          "likes": 120,
+          "price": "₹1,350",
+          "title": "Body Mist Oudh & Green Tea"
+        },
+        {
+          "desc": "The skin requires a gentle boost after cleansing to rehydrate, tone and...",
+          "img": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=400",
+          "likes": 340,
+          "price": "₹1,350",
+          "title": "Facial Tonic Mist Pure Rosewater"
+        },
+        {
+          "desc": "Made with tender Coconut Water, fresh Basil leaves and cooling Aloe...",
+          "img": "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&q=80&w=400",
+          "likes": 89,
+          "price": "₹1,575",
+          "title": "Sheer Sun Fluid With SPF 50"
+        },
+        {
+          "desc": "This Light Hydrating Facial Gel Panchpushp is infused with the pure...",
+          "img": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=400",
+          "likes": 212,
+          "price": "₹1,875",
+          "title": "Light Hydrating Facial Gel"
+        },
+        {
+          "desc": "This revolutionary Night Cream is a breakthrough blend immersed in an...",
+          "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
+          "likes": 512,
+          "price": "₹3,375",
+          "title": "Transformative Soundarya Night Cream"
+        }
+      ],
+      "subtitleHtml": "Experience Ayurveda, share your story. Be part of the #FETribe—tag <span className='font-semibold text-luxury-gold'>@forestessentials</span> to get featured.",
+      "title": "Trusted Tales"
+    },
+    "id": "trusted_tales",
+    "order": 4,
+    "visible": true
+  }
+}

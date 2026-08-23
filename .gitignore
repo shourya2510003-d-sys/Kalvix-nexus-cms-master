@@ -6,7 +6,6 @@
 acme.json
 
 # Exclude Frontend (it has its own repository)
-frontend/
 frontend_old/
 legacy_code/
 
@@ -28,3 +27,6 @@ system_monitor.log
 divine-cardinal-standalone/postgres/data/
 divine-cardinal-standalone/meili_data/
 divine-cardinal-standalone/redis/data/
+
+.next/
+node_modules/
