@@ -12,19 +12,30 @@ var Server *asynq.Server
 var Mux *asynq.ServeMux
 
 func InitAsynq() {
-	host := os.Getenv("REDIS_HOST")
-	if host == "" {
-		host = "redis"
-	}
-	port := os.Getenv("REDIS_PORT")
-	if port == "" {
-		port = "6379"
-	}
-	password := os.Getenv("REDIS_PASSWORD")
+	redisUrl := os.Getenv("REDIS_URL")
+	var redisConnOpt asynq.RedisConnOpt
 
-	redisConnOpt := asynq.RedisClientOpt{
-		Addr:     host + ":" + port,
-		Password: password,
+	if redisUrl != "" {
+		opt, err := asynq.ParseRedisURI(redisUrl)
+		if err != nil {
+			log.Fatalf("Failed to parse REDIS_URL for asynq: %v", err)
+		}
+		redisConnOpt = opt
+	} else {
+		host := os.Getenv("REDIS_HOST")
+		if host == "" {
+			host = "redis"
+		}
+		port := os.Getenv("REDIS_PORT")
+		if port == "" {
+			port = "6379"
+		}
+		password := os.Getenv("REDIS_PASSWORD")
+	
+		redisConnOpt = asynq.RedisClientOpt{
+			Addr:     host + ":" + port,
+			Password: password,
+		}
 	}
 
 	// Initialize Client for enqueueing jobs
