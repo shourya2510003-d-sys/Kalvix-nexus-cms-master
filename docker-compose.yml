@@ -92,6 +92,8 @@ services:
   redis:
     image: redis:7-alpine
     restart: always
+    ports:
+      - "6379:6379"
     volumes:
       - ./redis/data:/data
     networks:
