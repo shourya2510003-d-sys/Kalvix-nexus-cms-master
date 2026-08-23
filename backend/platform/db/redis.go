@@ -21,10 +21,11 @@ func InitRedis() {
 	if port == "" {
 		port = "6379"
 	}
+	password := os.Getenv("REDIS_PASSWORD")
 
 	RedisClient = redis.NewClient(&redis.Options{
 		Addr:     host + ":" + port,
-		Password: "", // No password by default
+		Password: password, // Supports local (empty) and cloud (Upstash)
 		DB:       0,  // Use default DB
 	})
 

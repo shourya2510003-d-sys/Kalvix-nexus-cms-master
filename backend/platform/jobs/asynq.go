@@ -20,9 +20,11 @@ func InitAsynq() {
 	if port == "" {
 		port = "6379"
 	}
+	password := os.Getenv("REDIS_PASSWORD")
 
 	redisConnOpt := asynq.RedisClientOpt{
-		Addr: host + ":" + port,
+		Addr:     host + ":" + port,
+		Password: password,
 	}
 
 	// Initialize Client for enqueueing jobs
