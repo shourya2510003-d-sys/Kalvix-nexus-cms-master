@@ -69,7 +69,11 @@ func TenantResolver() fiber.Handler {
 		passwordEnv := os.Getenv("DB_PASSWORD")
 		portEnv := os.Getenv("DB_PORT")
 
-		dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=UTC", hostEnv, userEnv, passwordEnv, tenant.DBName, portEnv)
+		sslmode := os.Getenv("DB_SSLMODE")
+		if sslmode == "" {
+			sslmode = "disable"
+		}
+		dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=%s TimeZone=UTC", hostEnv, userEnv, passwordEnv, tenant.DBName, portEnv, sslmode)
 		newTenantDB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 		if err != nil {
 			log.Printf("Failed to connect to tenant DB %s: %v", tenant.DBName, err)
