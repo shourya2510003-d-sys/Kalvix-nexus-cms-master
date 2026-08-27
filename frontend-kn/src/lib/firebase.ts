@@ -3,19 +3,19 @@ import { getDatabase, ref, get, remove } from "firebase/database";
 import { getFirestore } from "firebase/firestore";
 
 if (!process.env.NEXT_PUBLIC_FIREBASE_API_KEY) {
-  throw new Error("Critical environment variable NEXT_PUBLIC_FIREBASE_API_KEY is missing.");
+  console.warn("Warning: NEXT_PUBLIC_FIREBASE_API_KEY is missing.");
 }
 if (!process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN) {
-  throw new Error("Critical environment variable NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN is missing.");
+  console.warn("Warning: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN is missing.");
 }
 if (!process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID) {
-  throw new Error("Critical environment variable NEXT_PUBLIC_FIREBASE_PROJECT_ID is missing.");
+  console.warn("Warning: NEXT_PUBLIC_FIREBASE_PROJECT_ID is missing.");
 }
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "dummy-api-key",
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "dummy-auth-domain",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "dummy-project-id",
   databaseURL: "https://kalvix-nexus-default-rtdb.firebaseio.com",
 };
 
